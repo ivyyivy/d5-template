@@ -1,95 +1,64 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+
 header {
-    display: flex grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 33.33% 33.33% 33.33%;
-}
-
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    line-height: 1.5;
-    color: #fffdd6;
-    background-image: url(mountain.jpg);
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
+    background-color: #6d6a6a;
+    color: #fff;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    min-height: 100vh
-}
-
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: #fffdd6;
-    margin-top: 20px;
-}
-
-h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: #fffdd6;
-    margin-top: 120px;
-}
-
-p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: #fffdd6;
-    margin-top: 10px;
-}
-
-input[type="text"],
-textarea {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    height: 200px;
     padding: 10px;
-    border: 1px solid #fbf7f7;
-    border-radius: 4px;
-    width: 50%;
-    margin-bottom: 20px;
-
+    grid-column: 1 / -1;
 }
 
-.input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+header h1 {
+    line-height: 200px;
+    margin: 0;
 }
 
-
-.input-container button {
-    background-color: #ffac33;
+.column:nth-child(4) {
+    background-color: hsl(233, 54%, 44%);
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 20px;
+    min-height: 300px;
 }
 
-@keyframes run-rabbit {
-    from {
-        top: 100%;
+.column:nth-child(2) {
+    background-color: hsl(175, 65%, 40%);
+    color: white;
+    padding: 20px;
+    min-height: 300px;
+}
+
+.column:nth-child(3) {
+    background-color: hsl(74, 67%, 40%);
+    color: white;
+    padding: 20px;
+    min-height: 300px;
+}
+
+footer {
+    background-color: #b9b5b5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    grid-column: 1 / -1;
+    height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto 1fr;
     }
 
-    to {
-        top: 0%;
-    }
-
-
+    header,
     footer {
-        text-align: center;
-        font-size: 5pt;
-        margin-top: 0px;
-        width: 100%;
-
+        grid-column: 1 / -1;
     }
+}
