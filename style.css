@@ -29,10 +29,6 @@ header h1 {
     margin: 0;
 }
 
-.column:hover {
-    background-color: #585858;
-}
-
 .column:nth-child(4) {
     background-color: hsl(233, 54%, 44%);
     color: white;
@@ -61,6 +57,10 @@ footer {
     padding: 10px;
     grid-column: 1 / -1;
     height: 100px;
+}
+
+.column:hover {
+    background-color: #585858;
 }
 
 @media only screen and (max-width: 600px) {
