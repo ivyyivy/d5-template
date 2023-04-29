@@ -29,6 +29,10 @@ header h1 {
     margin: 0;
 }
 
+.column:hover {
+    background-color: #585858;
+}
+
 .column:nth-child(4) {
     background-color: hsl(233, 54%, 44%);
     color: white;
